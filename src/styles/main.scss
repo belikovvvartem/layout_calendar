@@ -24,7 +24,7 @@ body {
   flex-wrap: wrap;
   gap: $gap;
   padding: 0 $padding-x;
-  width: calc(#{$day-size} * 7 + #{$gap} * 6 + #{$padding-x} * 2);
+  width: calc(#{$day-size} * 7 + #{$gap} * 6 + #{$padding-total});
   box-sizing: border-box;
   position: relative;
 }
