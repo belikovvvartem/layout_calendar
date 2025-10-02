@@ -9,6 +9,8 @@ $color-day: #eee;
 $color-hover: #FFBFCB;
 $hover-move: 20px;
 $transition-time: 0.5s;
+$padding-total: 10px;
+$padding-x: $padding-total / 2;
 
 body {
   margin: 0;
@@ -63,17 +65,19 @@ body {
 }
 
 @for $len from 28 through 31 {
-  .calendar--month-#{$len} {
+  .calendar--month-length-#{$len} {
     .calendar__day:nth-child(n + #{$len + 1}) {
       display: none;
     }
   }
 }
 
-$days: sun 0, mon 1, tue 2, wed 3, thu 4, fri 5, sat 6;
+
+
+$days: mon 0, tue 1, wed 2, thu 3, fri 4, sat 5, sun 6;
 
 @each $day, $index in $days {
-  .calendar--start-#{$day} {
+  .calendar--start-day-#{$day} {
     .calendar__day:nth-child(1) {
       margin-left: calc(#{$index} * (#{$day-size} + #{$gap}));
     }
